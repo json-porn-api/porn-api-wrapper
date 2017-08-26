@@ -1,0 +1,25 @@
+{
+  "name": "porn-api-wrapper",
+  "version": "1.0.0",
+  "description": "Node module to work with the JSON Porn API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/json-porn-api/porn-api-wrapper.git"
+  },
+  "keywords": [
+    "json",
+    "porn",
+    "api",
+    "wraper"
+  ],
+  "author": "Stephan Schultz <contact@steppschuh.net> (http://steppschuh.net)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/json-porn-api/porn-api-wrapper/issues"
+  },
+  "homepage": "https://github.com/json-porn-api/porn-api-wrapper#readme"
+}
