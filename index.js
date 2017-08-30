@@ -1,5 +1,1 @@
-module.exports = {
-  test: function(name) {
-    return "Hello, ${name}!";
-  }
-};
+module.exports = require('./lib/porn-api');

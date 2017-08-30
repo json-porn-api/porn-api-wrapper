@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "Node module to work with the JSON Porn API",
   "main": "index.js",
+  "devDependencies": {
+    "flow-bin": "^0.41.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "flow": "flow"
   },
   "repository": {
     "type": "git",
