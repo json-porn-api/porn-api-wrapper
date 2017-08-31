@@ -4,12 +4,19 @@
 
 'use strict';
 
-var should = require('chai').should();
-var {Response} = require('../lib/response');
+const should = require('chai').should();
+const fs = require('fs');
+const path = require('path');
+import {Response} from '../lib/response';
+
+var getApiResponseFromFile = function(fileName: string): string {
+	let filePath = path.join(__dirname, 'api-responses', fileName);
+	return fs.readFileSync(filePath, "utf8");
+}
 
 describe('Response Parsing', function() {
 
-	const responseString = "{\r\n    \"statusCode\": 200,\r\n    \"statusMessage\": \"OK\",\r\n    \"lastUpdated\": 1504128373543,\r\n    \"content\": []\r\n}";
+	const responseString = getApiResponseFromFile("search.json");
 	const response = Response.fromString(responseString);
 
   it('Parses reseponse status code', function() {
@@ -21,11 +28,11 @@ describe('Response Parsing', function() {
   });
 
   it('Parses reseponse update timestamp', function() {
-  	response.lastUpdated.getTime().should.equal(1504128373543);
+  	response.lastUpdated.getTime().should.equal(1504170861504);
   });
 
   it('Parses reseponse content', function() {
-  	response.content.length.should.equal(0);
+  	response.content.length.should.equal(56);
   });
 
 });
